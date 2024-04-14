@@ -1,0 +1,14 @@
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\config\MybatisPlusConfig.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\service\impl\MediaFileProcessServiceImpl.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\service\jobhandler\VideoTask.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\service\jobhandler\SampleXxlJob.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\mapper\MediaProcessMapper.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\service\MediaFileService.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\service\MediaFileProcessService.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\config\XxlJobConfig.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\mapper\MqMessageHistoryMapper.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\mapper\MediaProcessHistoryMapper.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\config\MinioConfig.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\service\impl\MediaFileServiceImpl.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\mapper\MqMessageMapper.java
+D:\itcast2023\xc_edu3.1\code_402\xuecheng-plus-project\xuecheng-plus-media\xuecheng-plus-media-service\src\main\java\com\xuecheng\media\mapper\MediaFilesMapper.java

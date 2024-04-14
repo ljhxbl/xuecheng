@@ -1,0 +1,11 @@
+com\xuecheng\content\api\SecurityUtil$XcUser.class
+com\xuecheng\content\api\CourseOpenController.class
+com\xuecheng\content\api\SecurityUtil.class
+com\xuecheng\content\api\TeachplanController.class
+com\xuecheng\content\config\ResouceServerConfig.class
+com\xuecheng\ContentApplication.class
+com\xuecheng\content\api\FreemarkerController.class
+com\xuecheng\content\api\CourseBaseInfoController.class
+com\xuecheng\content\config\TokenConfig.class
+com\xuecheng\content\api\CoursePublishController.class
+com\xuecheng\content\api\CourseCategoryController.class

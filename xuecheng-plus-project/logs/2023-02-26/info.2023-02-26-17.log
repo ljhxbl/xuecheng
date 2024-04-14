@@ -1,0 +1,90 @@
+2023-02-26 18:00:01,413 DEBUG [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT id,course_id,course_name,user_id,company_id,order_type,create_date,valid_days,course_price,status,validtime_start,validtime_end,remarks FROM xc_choose_course WHERE id=?
+2023-02-26 18:00:01,413 DEBUG [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT id,course_id,course_name,user_id,company_id,order_type,create_date,valid_days,course_price,status,validtime_start,validtime_end,remarks FROM xc_choose_course WHERE id=?
+2023-02-26 18:00:01,417 DEBUG [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2][BaseJdbcLogger.java:137] - ==> Parameters: 19(String)
+2023-02-26 18:00:01,417 DEBUG [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2][BaseJdbcLogger.java:137] - ==> Parameters: 19(String)
+2023-02-26 18:00:01,418 DEBUG [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2][BaseJdbcLogger.java:137] - <==      Total: 1
+2023-02-26 18:00:01,418 DEBUG [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2][BaseJdbcLogger.java:137] - <==      Total: 1
+2023-02-26 18:00:01,419 WARN [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2][ConditionalRejectingErrorHandler.java:129] - Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method 'public void com.xuecheng.learning.service.impl.ReceivePayNotifyService.receive(org.springframework.amqp.core.Message)' threw exception
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:229)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:134)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1608)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1527)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1515)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1506)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1450)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:975)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:921)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:83)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1296)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1202)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.xuecheng.base.exception.XueChengPlusException: 保证选课记录状态失败
+	at com.xuecheng.base.exception.XueChengPlusException.cast(XueChengPlusException.java:31)
+	at com.xuecheng.learning.service.impl.ReceivePayNotifyService.receive(ReceivePayNotifyService.java:52)
+	at sun.reflect.GeneratedMethodAccessor162.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:171)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:120)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:53)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:221)
+	... 13 more
+2023-02-26 18:00:01,419 WARN [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2][ConditionalRejectingErrorHandler.java:129] - Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method 'public void com.xuecheng.learning.service.impl.ReceivePayNotifyService.receive(org.springframework.amqp.core.Message)' threw exception
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:229)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:134)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1608)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1527)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1515)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1506)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1450)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:975)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:921)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:83)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1296)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1202)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.xuecheng.base.exception.XueChengPlusException: 保证选课记录状态失败
+	at com.xuecheng.base.exception.XueChengPlusException.cast(XueChengPlusException.java:31)
+	at com.xuecheng.learning.service.impl.ReceivePayNotifyService.receive(ReceivePayNotifyService.java:52)
+	at sun.reflect.GeneratedMethodAccessor162.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:171)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:120)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:53)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:221)
+	... 13 more
+2023-02-26 18:00:01,594 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=10.254.7.70&serviceName=xuecheng-plus-project%40%40checkcode&udpPort=57832&clusters=, body: {}
+2023-02-26 18:00:01,594 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=10.254.7.70&serviceName=xuecheng-plus-project%40%40checkcode&udpPort=57832&clusters=, body: {}
+2023-02-26 18:00:02,334 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-02-26 18:00:02,334 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-02-26 18:00:02,535 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] dev402 sending beat to server: BeatInfo{port=63030, ip='192.168.101.1', weight=1.0, serviceName='xuecheng-plus-project@@orders-api', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2023-02-26 18:00:02,535 DEBUG [com.alibaba.nacos.naming.beat.sender][NamingProxy.java:421] - [BEAT] dev402 sending beat to server: BeatInfo{port=63030, ip='192.168.101.1', weight=1.0, serviceName='xuecheng-plus-project@@orders-api', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false}
+2023-02-26 18:00:02,535 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40orders-api&namespaceId=dev402&port=63030&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-02-26 18:00:02,535 DEBUG [com.alibaba.nacos.naming.beat.sender][NacosRestTemplate.java:476] - HTTP method: PUT, url: http://192.168.101.65:8848/nacos/v1/ns/instance/beat?app=unknown&serviceName=xuecheng-plus-project%40%40orders-api&namespaceId=dev402&port=63030&clusterName=DEFAULT&ip=192.168.101.1, body: {}
+2023-02-26 18:00:02,629 DEBUG [PollingServerListUpdater-0][HostReactor.java:306] - failover-mode: false
+2023-02-26 18:00:02,629 DEBUG [PollingServerListUpdater-0][HostReactor.java:306] - failover-mode: false
+2023-02-26 18:00:02,629 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:241] - List of Servers for auth-service obtained from Discovery client: [192.168.101.1:63070]
+2023-02-26 18:00:02,629 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:241] - List of Servers for auth-service obtained from Discovery client: [192.168.101.1:63070]
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:246] - Filtered List of Servers for auth-service obtained from Discovery client: [192.168.101.1:63070]
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:246] - Filtered List of Servers for auth-service obtained from Discovery client: [192.168.101.1:63070]
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:491] - LoadBalancer [auth-service]: clearing server list (SET op)
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:507] - LoadBalancer [auth-service]:  addServer [192.168.101.1:63070]
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:491] - LoadBalancer [auth-service]: clearing server list (SET op)
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:507] - LoadBalancer [auth-service]:  addServer [192.168.101.1:63070]
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:179] - Setting server list for zones: {unknown=[192.168.101.1:63070]}
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:491] - LoadBalancer [auth-service_unknown]: clearing server list (SET op)
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:179] - Setting server list for zones: {unknown=[192.168.101.1:63070]}
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:491] - LoadBalancer [auth-service_unknown]: clearing server list (SET op)
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:507] - LoadBalancer [auth-service_unknown]:  addServer [192.168.101.1:63070]
+2023-02-26 18:00:02,630 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:507] - LoadBalancer [auth-service_unknown]:  addServer [192.168.101.1:63070]
+2023-02-26 18:00:03,003 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=10.254.7.70&serviceName=xuecheng-plus-project%40%40auth-service&udpPort=54667&clusters=DEFAULT, body: {}
+2023-02-26 18:00:03,003 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=10.254.7.70&serviceName=xuecheng-plus-project%40%40auth-service&udpPort=54667&clusters=DEFAULT, body: {}
+2023-02-26 18:00:03,168 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=10.254.7.70&serviceName=xuecheng-plus-project%40%40gateway&udpPort=57832&clusters=DEFAULT, body: {}
+2023-02-26 18:00:03,168 DEBUG [com.alibaba.nacos.client.naming.updater][NacosRestTemplate.java:476] - HTTP method: GET, url: http://192.168.101.65:8848/nacos/v1/ns/instance/list?app=unknown&healthyOnly=false&namespaceId=dev402&clientIP=10.254.7.70&serviceName=xuecheng-plus-project%40%40gateway&udpPort=57832&clusters=DEFAULT, body: {}
+2023-02-26 18:00:03,630 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
+2023-02-26 18:00:03,630 DEBUG [com.alibaba.nacos.naming.failover][FailoverReactor.java:147] - failover switch is not found, failover00-00---000-VIPSRV_FAILOVER_SWITCH-000---00-00
